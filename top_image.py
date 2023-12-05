@@ -199,11 +199,11 @@ class Main(QtWidgets.QMainWindow):
         data = self.cormyr.image.read_path(start_pos, end_pos, pixel_length=1/2.7,
                                            rest=budget * 4)
 
-        rest_text = '<br >'.join(f'Day {index+1}: {terrain} for {distance:.2f} miles'
+        rest_text = '<br >'.join(f'Day {index+1}: {distance:.2f} miles, <b>Rest:</b> {terrain}'
                                  for index, (position, distance, _, terrain) in enumerate(data['rests']))
         stages_text = '<br >'.join(f'{terrain} for {distance:.2f} miles' for _, distance, _, terrain in data['stages'])
         text = f'''<b>Start:</b>\t\t {start_pos}<br >
-        <b>End:</b>\t\t {end_pos}<br >
+        <b>Destination:</b>\t\t {end_pos}<br >
         <b>Terrain Budget per Day:</b>\t\t {budget}<br >
         <b>Total Distance:</b> {sum(stage[1] for stage in data['stages']):.2f} miles <br >
         <b>Arrival:</b> on Day {len(data["rests"]) + 1}
