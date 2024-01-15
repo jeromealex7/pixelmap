@@ -1,0 +1,12 @@
+altgraph==0.17.4
+networkx==3.2.1
+packaging==23.2
+pefile==2023.2.7
+pip==21.3.1
+pyinstaller-hooks-contrib==2023.10
+pyinstaller==6.2.0
+PySide2==5.15.2.1
+pywin32-ctypes==0.2.2
+setuptools==60.2.0
+shiboken2==5.15.2.1
+wheel==0.37.1
